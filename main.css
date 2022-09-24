@@ -7,6 +7,10 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 1;
 }
 .header__logo {
     height: 30px;
@@ -41,9 +45,29 @@ box-shadow: 0 16px 36px rgba(246 152 12 / 20%);
     width: 500px;
 }
 
+@keyframes rotation {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 .about_sun-image {
     width: 100px;
     height: 100px;
+    animation: rotation 10s infinite linear;
+    position: absolute;
+}
+
+@keyframes about_sun-image {
+
+}
+
+.about_sun-image:hover {
+    transform: rotate(360);
 }
 
 .about {
